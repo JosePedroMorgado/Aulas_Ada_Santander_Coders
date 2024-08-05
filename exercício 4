@@ -1,0 +1,38 @@
+<h2>4) Faça um código que receba múltiplos números inteiros em seguida informe quantos são pares e quantos são ímpares.</h2>
+
+# espaço das listas e contador.
+
+lista_numeros = []
+pares = []
+impares = []
+
+contagem_pares = 0
+contagem_impares = 0
+
+# Enquanto for verdadeiro
+
+while True:
+
+    numeros = input('Digite seu número aqui: ')
+
+# se a variável número for igual a vazia, o código vai parar
+# se a variável conter um número, ele será convertido em número inteiro e será adicionado a lista números.
+
+    if numeros == "":
+        break
+    else:
+        numero = int(numeros)
+        lista_numeros.append(numero)
+
+# condição para verificar se o número digitado é par ou ímpar para realizar a contagem
+    if numero %2 == 0:
+        pares.append(numero)
+        contagem_pares +=1
+    else:
+        impares.append(numero)
+        contagem_impares +=1
+
+
+print("lista de números", lista_numeros)
+print("Quantidade de números pares:", contagem_pares)
+print("Quantidade de números impares:", contagem_impares)
